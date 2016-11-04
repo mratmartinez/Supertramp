@@ -12,7 +12,7 @@
     General window layout (geometric stuff)
 -->
 
-<frame_geometry name="frame_geometry_normal" title_scale="medium" rounded_top_left="false" rounded_top_right="false">
+<frame_geometry name="frame_geometry" title_scale="medium" rounded_top_left="false" rounded_top_right="false">
 <distance name="left_width" value="1"/>
 <distance name="right_width" value="1"/>
 <distance name="bottom_height" value="1"/>
@@ -42,7 +42,7 @@
 -->
 
 	
-<draw_ops name="draw_title_text_normal">
+<draw_ops name="draw_title_text">
     <title x="((width - title_width) / 2)" y="(height - title_height) / 2" color="#FFFFFF"/>
 </draw_ops>
 
@@ -78,22 +78,22 @@
 -->
 <!-- close button-->
 
-<draw_ops name="button_close_normal">
-<image filename="button_close_normal.png" x="0" y="0" width="object_width" height="object_height"/>
+<draw_ops name="button_close">
+<image filename="button_close.png" x="0" y="0" width="object_width" height="object_height"/>
 </draw_ops>
 <!-- maximize button-->
 
-<draw_ops name="button_max_normal">
-<image filename="button_max_normal.png" x="0" y="0" width="object_width" height="object_height"/>
+<draw_ops name="button_max">
+<image filename="button_max.png" x="0" y="0" width="object_width" height="object_height"/>
 </draw_ops>
 <!-- minimize button-->
 
-<draw_ops name="button_min_normal">
-<image filename="button_min_normal.png" x="0" y="0" width="object_width" height="object_height"/>
+<draw_ops name="button_min">
+<image filename="button_min.png" x="0" y="0" width="object_width" height="object_height"/>
 </draw_ops>
 <!-- menu icon -->
 
-<draw_ops name="button_menu_normal">
+<draw_ops name="button_menu">
 <image filename="menu.png" x="0" y="0" width="object_width" height="object_height"/>
 
 <!--
@@ -106,64 +106,64 @@
 -->
 <!-- normal -->
 
-<frame_style name="frame_style_normal_focused" geometry="frame_geometry_normal">
-<piece position="title" draw_ops="draw_title_text_normal"/>
+<frame_style name="frame_style_focused" geometry="frame_geometry">
+<piece position="title" draw_ops="draw_title_text"/>
 <piece position="titlebar" draw_ops="draw_title"/>
 <piece position="left_edge" draw_ops="draw_frame"/>
 <piece position="right_edge" draw_ops="draw_frame"/>
 <piece position="bottom_edge" draw_ops="draw_frame"/>
-<button function="close" state="normal" draw_ops="button_close_normal"/>
-<button function="close" state="prelight" draw_ops="button_close_normal"/>
-<button function="close" state="pressed" draw_ops="button_close_normal"/>
-<button function="minimize" state="normal" draw_ops="button_min_normal"/>
-<button function="minimize" state="prelight" draw_ops="button_min_normal"/>
-<button function="minimize" state="pressed" draw_ops="button_min_normal"/>
-<button function="maximize" state="normal" draw_ops="button_max_normal"/>
-<button function="maximize" state="prelight" draw_ops="button_max_normal"/>
-<button function="maximize" state="pressed" draw_ops="button_max_normal"/>
-<button function="menu" state="normal" draw_ops="button_menu_normal"/>
-<button function="menu" state="prelight" draw_ops="button_menu_normal"/>
-<button function="menu" state="pressed" draw_ops="button_menu_normal"/>
+<button function="close" state="normal" draw_ops="button_close"/>
+<button function="close" state="prelight" draw_ops="button_close"/>
+<button function="close" state="pressed" draw_ops="button_close"/>
+<button function="minimize" state="normal" draw_ops="button_min"/>
+<button function="minimize" state="prelight" draw_ops="button_min"/>
+<button function="minimize" state="pressed" draw_ops="button_min"/>
+<button function="maximize" state="normal" draw_ops="button_max"/>
+<button function="maximize" state="prelight" draw_ops="button_max"/>
+<button function="maximize" state="pressed" draw_ops="button_max"/>
+<button function="menu" state="normal" draw_ops="button_menu"/>
+<button function="menu" state="prelight" draw_ops="button_menu"/>
+<button function="menu" state="pressed" draw_ops="button_menu"/>
 </frame_style>
 
-<frame_style name="frame_style_normal_unfocused" geometry="frame_geometry_abnormal">
+<frame_style name="frame_style_unfocused" geometry="frame_geometry_abnormal">
 <piece position="title" draw_ops="draw_title_text_inactive"/>
 <piece position="titlebar" draw_ops="draw_title_inactive"/>
 <piece position="left_edge" draw_ops="draw_frame"/>
 <piece position="right_edge" draw_ops="draw_frame"/>
 <piece position="bottom_edge" draw_ops="draw_frame"/>
-<button function="close" state="normal" draw_ops="button_close_normal"/>
-<button function="close" state="prelight" draw_ops="button_close_normal"/>
-<button function="close" state="pressed" draw_ops="button_close_normal"/>
-<button function="minimize" state="normal" draw_ops="button_min_normal"/>
-<button function="minimize" state="prelight" draw_ops="button_min_normal"/>
-<button function="minimize" state="pressed" draw_ops="button_min_normal"/>
-<button function="maximize" state="normal" draw_ops="button_max_normal"/>
-<button function="maximize" state="prelight" draw_ops="button_max_normal"/>
-<button function="maximize" state="pressed" draw_ops="button_max_normal"/>
-<button function="menu" state="normal" draw_ops="button_menu_normal"/>
-<button function="menu" state="prelight" draw_ops="button_menu_normal"/>
-<button function="menu" state="pressed" draw_ops="button_menu_normal"/>
+<button function="close" state="normal" draw_ops="button_close"/>
+<button function="close" state="prelight" draw_ops="button_close"/>
+<button function="close" state="pressed" draw_ops="button_close"/>
+<button function="minimize" state="normal" draw_ops="button_min"/>
+<button function="minimize" state="prelight" draw_ops="button_min"/>
+<button function="minimize" state="pressed" draw_ops="button_min"/>
+<button function="maximize" state="normal" draw_ops="button_max"/>
+<button function="maximize" state="prelight" draw_ops="button_max"/>
+<button function="maximize" state="pressed" draw_ops="button_max"/>
+<button function="menu" state="normal" draw_ops="button_menu"/>
+<button function="menu" state="prelight" draw_ops="button_menu"/>
+<button function="menu" state="pressed" draw_ops="button_menu"/>
 </frame_style>
 
-<frame_style_set name="frame_style_set_normal">
-<frame focus="yes" state="normal" resize="both" style="frame_style_normal_focused"/>
-<frame focus="no" state="normal" resize="both" style="frame_style_normal_unfocused"/>
-<frame focus="yes" state="maximized" style="frame_style_normal_focused"/>
-<frame focus="no" state="maximized" style="frame_style_normal_unfocused"/>
-<frame focus="yes" state="shaded" style="frame_style_normal_focused"/>
-<frame focus="no" state="shaded" style="frame_style_normal_unfocused"/>
-<frame focus="yes" state="maximized_and_shaded" style="frame_style_normal_focused"/>
-<frame focus="no" state="maximized_and_shaded" style="frame_style_normal_unfocused"/>
+<frame_style_set name="frame_style_set">
+<frame focus="yes" state="normal" resize="both" style="frame_style_focused"/>
+<frame focus="no" state="normal" resize="both" style="frame_style_unfocused"/>
+<frame focus="yes" state="maximized" style="frame_style_focused"/>
+<frame focus="no" state="maximized" style="frame_style_unfocused"/>
+<frame focus="yes" state="shaded" style="frame_style_focused"/>
+<frame focus="no" state="shaded" style="frame_style_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="frame_style_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="frame_style_unfocused"/>
 </frame_style_set>
-<window type="normal" style_set="frame_style_set_normal"/>
-<window type="dialog" style_set="frame_style_set_normal"/>
-<window type="modal_dialog" style_set="frame_style_set_normal"/>
-<window type="menu" style_set="frame_style_set_normal"/>
-<window type="utility" style_set="frame_style_set_normal"/>
-<window type="border" style_set="frame_style_set_normal"/>
-<menu_icon function="close" state="normal" draw_ops="button_close_normal"/>
-<menu_icon function="maximize" state="normal" draw_ops="button_max_normal"/>
-<menu_icon function="unmaximize" state="normal" draw_ops="button_max_normal"/>
-<menu_icon function="minimize" state="normal" draw_ops="button_min_normal"/>
+<window type="normal" style_set="frame_style_set"/>
+<window type="dialog" style_set="frame_style_set"/>
+<window type="modal_dialog" style_set="frame_style_set"/>
+<window type="menu" style_set="frame_style_set"/>
+<window type="utility" style_set="frame_style_set"/>
+<window type="border" style_set="frame_style_set"/>
+<menu_icon function="close" state="normal" draw_ops="button_close"/>
+<menu_icon function="maximize" state="normal" draw_ops="button_max"/>
+<menu_icon function="unmaximize" state="normal" draw_ops="button_max"/>
+<menu_icon function="minimize" state="normal" draw_ops="button_min"/>
 </metacity_theme>
