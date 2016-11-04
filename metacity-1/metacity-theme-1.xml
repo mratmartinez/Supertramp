@@ -81,39 +81,15 @@
 <draw_ops name="button_close_normal">
 <image filename="button_close_normal.png" x="0" y="0" width="object_width" height="object_height"/>
 </draw_ops>
-
-<draw_ops name="button_close_prelight">
-<image filename="button_close_prelight.png" x="0" y="0" width="object_width" height="object_height"/>
-</draw_ops>
-
-<draw_ops name="button_close_pressed">
-<image filename="button_close_pressed.png" x="0" y="0" width="object_width" height="object_height"/>
-</draw_ops>
 <!-- maximize button-->
 
 <draw_ops name="button_max_normal">
 <image filename="button_max_normal.png" x="0" y="0" width="object_width" height="object_height"/>
 </draw_ops>
-
-<draw_ops name="button_max_prelight">
-<image filename="button_max_prelight.png" x="0" y="0" width="object_width" height="object_height"/>
-</draw_ops>
-
-<draw_ops name="button_max_pressed">
-<image filename="button_max_pressed.png" x="0" y="0" width="object_width" height="object_height"/>
-</draw_ops>
 <!-- minimize button-->
 
 <draw_ops name="button_min_normal">
 <image filename="button_min_normal.png" x="0" y="0" width="object_width" height="object_height"/>
-</draw_ops>
-
-<draw_ops name="button_min_prelight">
-<image filename="button_min_prelight.png" x="0" y="0" width="object_width" height="object_height"/>
-</draw_ops>
-
-<draw_ops name="button_min_pressed">
-<image filename="button_min_pressed.png" x="0" y="0" width="object_width" height="object_height"/>
 </draw_ops>
 <!-- menu icon -->
 
@@ -125,22 +101,6 @@
 -->
 </draw_ops>
 
-<draw_ops name="button_menu_prelight">
-<image filename="menu.png" x="0" y="0" width="object_width" height="object_height"/>
-
-<!--
- <icon x="0" y="0" width="mini_icon_width" height="mini_icon_height" /> 
-    <tint color="white" alpha="0.3" x="0" y="0" width="mini_icon_width" height="mini_icon_height"/> 
--->
-</draw_ops>
-
-<draw_ops name="button_menu_inactive">
-
-<!--
- <icon x="0" y="0" width="mini_icon_width" height="mini_icon_height" alpha="0.5"/> 
--->
-<image filename="menu.png" x="0" y="0" width="object_width" height="object_height"/>
-</draw_ops>
 <!--
     Frame styles
 -->
@@ -153,16 +113,16 @@
 <piece position="right_edge" draw_ops="draw_frame"/>
 <piece position="bottom_edge" draw_ops="draw_frame"/>
 <button function="close" state="normal" draw_ops="button_close_normal"/>
-<button function="close" state="prelight" draw_ops="button_close_prelight"/>
-<button function="close" state="pressed" draw_ops="button_close_pressed"/>
+<button function="close" state="prelight" draw_ops="button_close_normal"/>
+<button function="close" state="pressed" draw_ops="button_close_normal"/>
 <button function="minimize" state="normal" draw_ops="button_min_normal"/>
-<button function="minimize" state="prelight" draw_ops="button_min_prelight"/>
-<button function="minimize" state="pressed" draw_ops="button_min_pressed"/>
+<button function="minimize" state="prelight" draw_ops="button_min_normal"/>
+<button function="minimize" state="pressed" draw_ops="button_min_normal"/>
 <button function="maximize" state="normal" draw_ops="button_max_normal"/>
-<button function="maximize" state="prelight" draw_ops="button_max_prelight"/>
-<button function="maximize" state="pressed" draw_ops="button_max_pressed"/>
+<button function="maximize" state="prelight" draw_ops="button_max_normal"/>
+<button function="maximize" state="pressed" draw_ops="button_max_normal"/>
 <button function="menu" state="normal" draw_ops="button_menu_normal"/>
-<button function="menu" state="prelight" draw_ops="button_menu_prelight"/>
+<button function="menu" state="prelight" draw_ops="button_menu_normal"/>
 <button function="menu" state="pressed" draw_ops="button_menu_normal"/>
 </frame_style>
 
@@ -172,18 +132,18 @@
 <piece position="left_edge" draw_ops="draw_frame"/>
 <piece position="right_edge" draw_ops="draw_frame"/>
 <piece position="bottom_edge" draw_ops="draw_frame"/>
-<button function="close" state="normal" draw_ops="button_close_pressed"/>
-<button function="close" state="prelight" draw_ops="button_close_prelight"/>
-<button function="close" state="pressed" draw_ops="button_close_pressed"/>
-<button function="minimize" state="normal" draw_ops="button_min_pressed"/>
-<button function="minimize" state="prelight" draw_ops="button_min_prelight"/>
-<button function="minimize" state="pressed" draw_ops="button_min_pressed"/>
-<button function="maximize" state="normal" draw_ops="button_max_pressed"/>
-<button function="maximize" state="prelight" draw_ops="button_max_prelight"/>
-<button function="maximize" state="pressed" draw_ops="button_max_pressed"/>
-<button function="menu" state="normal" draw_ops="button_menu_inactive"/>
-<button function="menu" state="prelight" draw_ops="button_menu_prelight"/>
-<button function="menu" state="pressed" draw_ops="button_menu_inactive"/>
+<button function="close" state="normal" draw_ops="button_close_normal"/>
+<button function="close" state="prelight" draw_ops="button_close_normal"/>
+<button function="close" state="pressed" draw_ops="button_close_normal"/>
+<button function="minimize" state="normal" draw_ops="button_min_normal"/>
+<button function="minimize" state="prelight" draw_ops="button_min_normal"/>
+<button function="minimize" state="pressed" draw_ops="button_min_normal"/>
+<button function="maximize" state="normal" draw_ops="button_max_normal"/>
+<button function="maximize" state="prelight" draw_ops="button_max_normal"/>
+<button function="maximize" state="pressed" draw_ops="button_max_normal"/>
+<button function="menu" state="normal" draw_ops="button_menu_normal"/>
+<button function="menu" state="prelight" draw_ops="button_menu_normal"/>
+<button function="menu" state="pressed" draw_ops="button_menu_normal"/>
 </frame_style>
 
 <frame_style_set name="frame_style_set_normal">
